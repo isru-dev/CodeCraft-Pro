@@ -1,0 +1,46 @@
+.testimonials-section {
+  padding: 100px 0; /* Removed side padding so scroll goes to edges */
+  background-color: #0f172a;
+  text-align: center;
+  overflow: hidden; /* Keeps the page from breaking */
+}
+
+.testimonials-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px 20px; /* Add padding here so cards don't touch edges */
+  overflow-x: auto; /* Enables horizontal scroll */
+  scroll-snap-type: x mandatory; /* Makes cards snap into view */
+  scrollbar-width: none; /* Hides scrollbar on Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar on IE/Edge */
+  cursor: grab;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.testimonials-container::-webkit-scrollbar {
+  display: none;
+}
+
+.testimonial-card {
+  flex: 0 0 400px; /* Crucial: Prevents cards from shrinking. Width is fixed at 400px */
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 24px;
+  text-align: left;
+  scroll-snap-align: center; /* Snaps to the center of the screen */
+  transition: 0.3s;
+}
+
+.testimonial-card:hover {
+  border-color: #38bdf8;
+  background: rgba(30, 41, 59, 0.6);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .testimonial-card {
+    flex: 0 0 300px; /* Smaller width on phones */
+    padding: 30px;
+  }
+}
