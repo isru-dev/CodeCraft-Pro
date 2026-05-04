@@ -8,9 +8,15 @@ export function Home(){
   return(
     <>
     <Hero /> 
-    <SocialProff />
-    <CourseGrid />
-    <Testimonials />
+    <section id="mentorship">
+      <SocialProff />
+    </section>
+   <section id="courses">
+        <CourseGrid />
+      </section>
+    <section id="testimonials">
+        <Testimonials />
+      </section>
     <Footer />
     <Header  />
     </>

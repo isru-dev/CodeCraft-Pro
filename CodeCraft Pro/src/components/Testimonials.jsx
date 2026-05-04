@@ -3,7 +3,7 @@ import john from '../assets/photomale.jpg';
 import michael from '../assets/youngmen.avif';
 import  selam from '../assets/photowo.jpg';
 import  Sarah from '../assets/photowome.jpg';
-
+import { useRef } from 'react';
 export function Testimonials() {
   const profiles = [
     {
@@ -49,13 +49,26 @@ export function Testimonials() {
       message: "The Power BI dashboarding techniques taught here are industry-leading. Highly recommend CodeCraft Pro."
     }
   ];
+const scrollRef = useRef(null);
 
+  const scroll = (direction) => {
+    const { current } = scrollRef;
+    if (direction === 'left') {
+      current.scrollBy({ left: -400, behavior: 'smooth' });
+    } else {
+      current.scrollBy({ left: 400, behavior: 'smooth' });
+    }
+  };
   return (
    <section className="testimonials-section" id="testimonials">
       <h2 className="testimonials-title">Student <span>Success Stories</span></h2>
       <p className="testimonials-subtitle">Join 5,000+ developers who transformed their careers.</p>
-      
-      <div className="testimonals-container">
+        {/* Navigation Arrows */}
+      <div className="scroll-controls">
+        <button onClick={() => scroll('left')} className="arrow-btn">←</button>
+        <button onClick={() => scroll('right')} className="arrow-btn">→</button>
+      </div>
+      <div className="testimonals-container" ref={scrollRef}>
         {profiles.map((profile) => (
           <div key={profile.id} className="inner-container">
             <div className="message">"{profile.message}"</div>
