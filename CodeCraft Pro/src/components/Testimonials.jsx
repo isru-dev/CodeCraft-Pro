@@ -51,16 +51,20 @@ export function Testimonials() {
   ];
 
   return (
-    <section className="testimonials-section">
-      <h2 className="testimonials-title">Real Results from <span>Real Students</span></h2>
-      <div className="testimonials-container">
+   <section className="testimonials-section">
+      <h2 className="testimonials-title">Student <span>Success Stories</span></h2>
+      <p className="testimonials-subtitle">Join 5,000+ developers who transformed their careers.</p>
+      
+      <div className="testimonals-container">
         {profiles.map((profile) => (
-          <div key={profile.id} className="testimonial-card">
-            <div className="quote-icon">“</div>
-            <p className="message">{profile.message}</p>
-            <div className="profile-info">
-              <img src={profile.photo} alt={profile.name} className="profile-photo" />
-              <div className="profile-details">
+          <div key={profile.id} className="inner-container">
+            <div className="message">"{profile.message}"</div>
+            
+            <div className="profile-row">
+              <div className="photo">
+                <img src={profile.photo} alt={profile.name} />
+              </div>
+              <div className="profile-text">
                 <h4 className="name">{profile.name}</h4>
                 <p className="role">{profile.role}</p>
               </div>
