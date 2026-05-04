@@ -3,6 +3,7 @@ import {SocialProff} from "../components/SocialProff";
 import {CourseGrid} from "../components/courseGrid";
 import {Testimonials}  from "../components/Testimonials";
 import { Footer } from "../components/footer";
+import { Header } from "../components/Header";
 export function Home(){
   return(
     <>
@@ -11,6 +12,7 @@ export function Home(){
     <CourseGrid />
     <Testimonials />
     <Footer />
+    <Header />
     </>
    );
 }

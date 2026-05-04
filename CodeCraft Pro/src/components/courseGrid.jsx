@@ -25,7 +25,7 @@ const courses = [
 
 export function CourseGrid() {
   return (
-    <div className="course-container">
+    <div className="course-container" id="courses">
       <h2 className="section-title">Master Your Craft</h2>
       <div className="course-grid">
         {courses.map((course) => (

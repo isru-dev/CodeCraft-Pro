@@ -1,0 +1,9 @@
+/* index.css or App.css */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add some padding-top to your sections so the Header doesn't cover the title */
+section {
+  scroll-margin-top: 80px; /* Matches the height of your Header */
+}

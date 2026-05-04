@@ -8,7 +8,7 @@ import amazon from "../assets/amazon.png";
 
 export function SocialProff() {
   return (
-    <div className="stats-section">
+    <div className="stats-section" id="mentorship">
       <div className="stats-header">
         <h1 className="stats-number">5k+ <span className="stats-label">Active Students</span></h1>
         <p className="stats-subtext">Our graduates work at the world's most innovative companies</p>

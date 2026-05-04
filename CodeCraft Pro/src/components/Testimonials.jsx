@@ -51,7 +51,7 @@ export function Testimonials() {
   ];
 
   return (
-   <section className="testimonials-section">
+   <section className="testimonials-section" id="testimonials">
       <h2 className="testimonials-title">Student <span>Success Stories</span></h2>
       <p className="testimonials-subtitle">Join 5,000+ developers who transformed their careers.</p>
       
