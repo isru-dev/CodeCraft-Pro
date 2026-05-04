@@ -12,7 +12,7 @@ export function Home(){
     <CourseGrid />
     <Testimonials />
     <Footer />
-    <Header />
+    <Header  />
     </>
    );
 }
