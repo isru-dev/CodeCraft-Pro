@@ -1,0 +1,201 @@
+/* --- Course Grid Main Container --- */
+.course-container {
+  padding: 100px 20px;
+  background-color: #0f172a; /* Deep tech charcoal */
+  color: #f8fafc;
+  font-family: 'Inter', sans-serif;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 60px;
+  letter-spacing: -1px;
+}
+
+.section-title span {
+  color: #38bdf8; /* Accent Blue */
+}
+
+/* --- The Grid System --- */
+.course-grid {
+  display: grid;
+  /* repeat(auto-fit) makes it responsive without media queries for columns */
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* --- The Course Card (Vertically Long) --- */
+.course-card {
+  background: linear-gradient(145deg, #1e293b, #111827);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 45px 35px;
+  min-height: 700px; /* Forces that vertically long professional look */
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle glowing hover effect */
+.course-card:hover {
+  transform: translateY(-12px);
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Top Content --- */
+.course-date {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.course-title {
+  font-size: 1.8rem;
+  margin: 20px 0;
+  line-height: 1.3;
+}
+
+.course-description {
+  color: #94a3b8;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* --- Middle Content (Learning Points) --- */
+.learning-points {
+  flex-grow: 1; /* Pushes the bottom content down */
+  margin: 40px 0;
+  padding: 25px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.learning-points h4 {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.learning-points ul {
+  list-style: none;
+  padding: 0;
+}
+
+.learning-points li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+  font-size: 0.95rem;
+  color: #e2e8f0;
+}
+
+.learning-points li span {
+  color: #38bdf8;
+  font-weight: bold;
+}
+
+/* --- Bottom Content (Pricing & Buttons) --- */
+.card-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 30px;
+}
+
+.price-tag {
+  margin-bottom: 25px;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #64748b;
+  font-size: 1rem;
+  margin-right: 12px;
+}
+
+.new-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #ffffff;
+}
+
+.urgency {
+  color: #fbbf24; /* Alert/Yellow for attention */
+  font-size: 0.8rem;
+  margin-top: 8px;
+  font-weight: 500;
+}
+
+.course-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.btn-register {
+  flex: 2;
+  background-color: #38bdf8;
+  color: #0f172a;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn-register:hover {
+  background-color: #7dd3fc;
+}
+
+.btn-cart {
+  flex: 1;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cart:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: white;
+}
+
+/* --- MEDIA QUERIES FOR MOBILE --- */
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .course-grid {
+    grid-template-columns: 1fr; /* Single column on phones */
+    padding: 0 10px;
+  }
+
+  .course-card {
+    min-height: auto; /* Allow content to dictate height on small screens */
+    padding: 35px 25px;
+  }
+
+  .new-price {
+    font-size: 2rem;
+  }
+
+  .course-buttons {
+    flex-direction: column; /* Stack buttons vertically on mobile */
+  }
+
+  .btn-register, .btn-cart {
+    width: 100%;
+  }
+}
