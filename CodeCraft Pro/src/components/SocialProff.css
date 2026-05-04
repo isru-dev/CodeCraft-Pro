@@ -1,0 +1,61 @@
+.stats-section {
+  padding: 60px 20px;
+  background-color: #0f172a; /* Same deep charcoal as hero */
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stats-number {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.stats-label {
+  font-size: 1.2rem;
+  color: #38bdf8; /* Accent color */
+  display: block;
+}
+
+.stats-subtext {
+  color: #94a3b8;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+.company-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Important for mobile */
+  gap: 50px;
+  opacity: 0.6; /* Makes them look more like a "set" */
+}
+
+.company-img {
+  height: 100px; /* Keeps all logos at the same height */
+  width: 200px;
+  filter: grayscale(100%) brightness(200%); /* Makes colored logos look white/grey */
+  transition: all 0.3s ease;
+}
+
+.company-img:hover {
+  filter: grayscale(0%) brightness(100%); /* Returns color on hover */
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .company-logos {
+    gap: 30px;
+  }
+  
+  .company-img {
+    height: 25px;
+  }
+  
+  .stats-number {
+    font-size: 2.2rem;
+  }
+}
