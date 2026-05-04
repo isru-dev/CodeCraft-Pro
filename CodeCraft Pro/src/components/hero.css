@@ -2,40 +2,121 @@
   margin: 0;
   padding: 0;
 }
-.hero-container{
-   background-image: url(../assets/i.jpg);
-   height: 50vh;
+.hero-container {
+  height: 100vh; /* Takes up most of the screen height */
   width: 100%;
-   background-size: cover;
+  background-image: linear-gradient(rgba(15, 23, 42, 0.8), rgba(15, 23, 42, 0.8)), 
+                    url('../assets/i.jpg');
   background-repeat: no-repeat;
-  position: relative;
-  
-}
-.hero-paragraph{
-  position: absolute;
-  left: 30px;
-  bottom: 50px;
-  color: white;
-}
-@media (min-width:800px){
-.hero-container{
-    height: 90vh;
-  width: 100%;
- background-image: url(../assets/i.jpg);
- background-size: cover;
-  background-repeat: no-repeat;  
-position: relative;
-}
-.hero-paragraph{
+  background-size: cover;
+  background-position: center;
   display: flex;
-  flex-direction: column;
-  height: 300px;
-  width: 400px;
-  justify-content: center;
   align-items: center;
-  position: absolute;
-  left: 50px;
-  bottom: 80px;
-  color: white;
+  justify-content: center;
+  color: #ffffff;
 }
+
+.hero-content {
+  text-align: center;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+.hero-tagline {
+  color: #38bdf8; /* A nice electric blue */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+
+.highlight {
+  color: #38bdf8;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #cbd5e1; /* Soft grey for readability */
+  margin-bottom: 40px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Simple Button Styles */
+.btn-main {
+  padding: 12px 30px;
+  background-color: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-outline {
+  padding: 12px 30px;
+  background: transparent;
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-main:hover {
+  background-color: #7dd3fc;
+  transform: translateY(-2px);
+}
+/* Media Query for Phones (768px and below) */
+@media (max-width: 768px) {
+  .hero-container {
+    height: 90vh; /* Slightly shorter on mobile to account for browser bars */
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 2.2rem; /* Shorter, punchier headline for small screens */
+    margin: 15px 0;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  .hero-actions {
+    flex-direction: column; /* Stack buttons vertically */
+    gap: 15px;
+    width: 100%;
+    max-width: 300px; /* Prevents buttons from being too wide */
+    margin: 0 auto; /* Centers the button stack */
+  }
+
+  .btn-main, .btn-outline {
+    width: 100%; /* Full width buttons for easier tapping */
+    padding: 14px; /* Larger hit area for thumbs */
+  }
+}
+
+/* Extra small devices (480px and below) */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .hero-tagline {
+    font-size: 0.8rem;
+  }
 }
