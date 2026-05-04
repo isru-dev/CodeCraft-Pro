@@ -3,9 +3,39 @@
   padding: 0;
 }
 .hero-container{
-  height: 500px;
+   background-image: url(../assets/i.jpg);
+   height: 50vh;
   width: 100%;
- background-image: url(../assets/code.jpg);
-  background-repeat: no-repeat;  
+   background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
   
+}
+.hero-paragraph{
+  position: absolute;
+  left: 30px;
+  bottom: 50px;
+  color: white;
+}
+@media (min-width:800px){
+.hero-container{
+    height: 90vh;
+  width: 100%;
+ background-image: url(../assets/i.jpg);
+ background-size: cover;
+  background-repeat: no-repeat;  
+position: relative;
+}
+.hero-paragraph{
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50px;
+  bottom: 80px;
+  color: white;
+}
 }
