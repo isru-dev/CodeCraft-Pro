@@ -1,0 +1,11 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.hero-container{
+  height: 500px;
+  width: 100%;
+ background-image: url(../assets/code.jpg);
+  background-repeat: no-repeat;  
+  
+}
